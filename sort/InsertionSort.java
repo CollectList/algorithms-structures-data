@@ -18,12 +18,12 @@ public class InsertionSort {
 			int j = i-1;
 			for(;j>=0;--j){
 				if(a[j] > value){
-					a[j+1] = a[j];
+					a[j+1] = a[j]; //数据移动
 				} else {
 					break;
 				}
 			}
-			a[j+1] = value;
+			a[j+1] = value; //插入数据
 		}
 	}
 
