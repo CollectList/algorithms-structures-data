@@ -16,9 +16,7 @@ public class BubbleSort {
     }
 
     public static void bubbleSort(int[] a, int n) {
-        if (n <= 1) {
-            return;
-        }
+        if (n <= 1) return;
 
         for (int i = 0; i < n; ++i) {
             //提前退出循环的标志
@@ -35,7 +33,7 @@ public class BubbleSort {
             }
             //没有交换数据，提前退出
             if (!flag) {
-                break;
+                break ;
             }
         }
     }
