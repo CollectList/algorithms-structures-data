@@ -1,5 +1,9 @@
-package sort;
-
+/**
+ * 插入排序
+ *
+ * @author weixing
+ * @date 2019/1/24 10:20
+ */
 public class InsertionSort {
 	
 	public static void main(String[] args){
@@ -18,12 +22,14 @@ public class InsertionSort {
 			int j = i-1;
 			for(;j>=0;--j){
 				if(a[j] > value){
-					a[j+1] = a[j]; //数据移动
+					//数据移动
+					a[j+1] = a[j];
 				} else {
 					break;
 				}
 			}
-			a[j+1] = value; //插入数据
+			//插入数据
+			a[j+1] = value;
 		}
 	}
 

@@ -1,5 +1,9 @@
-package sort;
-
+/**
+ * 冒泡排序
+ *
+ * @author weixing
+ * @date 2019/1/24 10:20
+ */
 public class BubbleSort {
 	
 	public static void main(String[] args){
@@ -15,17 +19,20 @@ public class BubbleSort {
 		if(n <= 1) return;
 		
 		for(int i = 0; i < n ; ++i){
-			boolean flag = false; //提前退出循环的标志
+			//提前退出循环的标志
+			boolean flag = false;
 			for(int j = 0; j < n-i-1; ++j){
 				if(a[j] > a[j+1]){
 					//交换
 					int temp = a[j];
 					a[j] = a[j+1];
 					a[j+1] = temp;
-					flag = true; //表示有交换数据
+					//表示有交换数据
+					flag = true;
 				}
 			}
-			if(!flag) break; //没有交换数据，提前退出
+			//没有交换数据，提前退出
+			if(!flag) break;
 		}
 	}
 }
