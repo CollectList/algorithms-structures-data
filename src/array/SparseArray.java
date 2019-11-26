@@ -1,5 +1,8 @@
 package array;
 
+/**
+ * 棋盘问题=》稀疏数组
+ */
 public class SparseArray {
 
     public static void main(String[] args) {
@@ -57,5 +60,23 @@ public class SparseArray {
             System.out.printf("%d\t%d\t%d\t\n", sparseArray[i][0], sparseArray[i][1], sparseArray[i][2]);
         }
         System.out.println();
+
+        System.out.println("<<<--------------@@@恢复二维数组");
+        // 1.读取稀疏数组第一行，创建棋盘二维数组
+        // 2.读取稀疏数组剩下行，填充二维数组
+        int[][] chessArry2 = new int[sparseArray[0][0]][sparseArray[0][1]];
+
+        for (int i = 1; i < sparseArray.length; i++) {
+            chessArry2[sparseArray[i][0]][sparseArray[i][1]] = sparseArray[i][2];
+        }
+
+        for (int[] row : chessArry2) {
+            for (int data : row) {
+                System.out.printf("%d\t", data);
+            }
+            System.out.println();
+        }
+
+
     }
 }
