@@ -17,13 +17,18 @@ public class BubbleSort {
 
     }
 
-    public static void bubbleSort(int[] a, int n) {
-        if (n <= 1) return;
+    /**
+     *
+     * @param a 数组
+     * @param length 数组长度
+     */
+    public static void bubbleSort(int[] a, int length) {
+        if (length <= 1) {return;}
 
-        for (int i = 0; i < n; ++i) {
+        for (int i = 0; i < length; ++i) {
             //提前退出循环的标志
             boolean flag = false;
-            for (int j = 0; j < n - i - 1; ++j) {
+            for (int j = 0; j < length - i - 1; ++j) {
                 if (a[j] > a[j + 1]) {
                     //交换
                     int temp = a[j];
